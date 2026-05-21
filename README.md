@@ -1,10 +1,10 @@
 # Bootloader Spoofer
 
-Spoof locked bootloader on local attestations. Built against the modern [libxposed API 101](https://github.com/libxposed/api). Only select apps which check the presence of an unlocked bootloader, never hook Google apps or system framework unless you want to fail Play Integrity checks lol.
+Spoofs a locked bootloader state for local attestation checks. Only enable it for apps that merely verify whether the bootloader is unlocked. Avoid hooking Google apps or the system framework unless you want Play Integrity checks to fail. If an app sends attestation certificates to a secure backend for verification, this module will not help and becomes ineffective.
 
-If the app sends the certificate to a secure server, you are fucked and this app is useless.
+Supports devices with broken TEE. This module is intended only for local attestation. For online attestation, use TrickyStore instead.
 
-This app was made possible with @chiteroman and @5ec1cff's CertHack.
+This project was made possible thanks to chiteroman and 5ec1cff.
 
 ## Modes
 
