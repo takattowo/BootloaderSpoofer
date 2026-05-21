@@ -2,9 +2,9 @@
 
 Spoofs a locked bootloader state for local attestation checks. Only enable it for apps that merely verify whether the bootloader is unlocked. Avoid hooking Google apps or the system framework unless you want Play Integrity checks to fail. If an app sends attestation certificates to a secure backend for verification, this module will not help and becomes ineffective.
 
-Supports devices with broken TEE. This module is intended only for local attestation. For online attestation, use TrickyStore instead.
+Supports devices with broken TEE. **This module is intended only for local attestation**. For online attestation, use `TrickyStore` instead.
 
-This project was made possible thanks to chiteroman and 5ec1cff.
+This project was made possible thanks to `chiteroman` and `5ec1cff`.
 
 ## Modes
 
