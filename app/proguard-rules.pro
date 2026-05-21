@@ -1,0 +1,15 @@
+-keep class com.takattowo.bootloaderspoofer.ModuleMain { *; }
+-keep class com.takattowo.bootloaderspoofer.MainActivity { *; }
+-keep class com.takattowo.bootloaderspoofer.AboutActivity { *; }
+-keep class com.takattowo.bootloaderspoofer.AdvancedActivity { *; }
+-keep class com.takattowo.bootloaderspoofer.EditKeyboxActivity { *; }
+-keep class com.takattowo.bootloaderspoofer.App { *; }
+-keep class com.takattowo.bootloaderspoofer.KeyboxData { *; }
+-keep class com.takattowo.bootloaderspoofer.KeyboxData$* { *; }
+-keepattributes RuntimeVisibleAnnotations
+-keep,allowobfuscation class * extends io.github.libxposed.api.XposedModule
+
+-keep class io.github.libxposed.service.** { *; }
+-keep class org.bouncycastle.** { *; }
+-dontwarn org.bouncycastle.**
+-dontwarn javax.naming.**

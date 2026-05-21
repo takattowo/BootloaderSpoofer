@@ -1,0 +1,10 @@
+id=com.takattowo.bootloaderspoofer
+name=Bootloader Spoofer
+version=1.0.0
+versionCode=1
+author=takattowo
+description=Spoof locked bootloader on local Android key attestations
+minApiVersion=101
+targetApiVersion=101
+staticScope=false
+updateJson=https://raw.githubusercontent.com/takattowo/BootloaderSpoofer/main/update.json

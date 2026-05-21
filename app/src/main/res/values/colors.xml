@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#3DDC84</color>
+
+    <!-- Light fallback (we default to dark via DayNight) -->
+    <color name="bg">#0E0E10</color>
+    <color name="surface">#1C1C1F</color>
+    <color name="surface_variant">#2A2A2E</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="text_tertiary">#8A8A8A</color>
+
+    <color name="status_card_bg">#0E5C8C</color>
+    <color name="status_card_bg_inactive">#3A3A3E</color>
+    <color name="status_icon_circle">#1A82BD</color>
+    <color name="status_icon_circle_inactive">#5A5A5E</color>
+
+    <color name="icon_tint">#CFCFCF</color>
+    <color name="accent">#5BB6F5</color>
+    <color name="divider">#26FFFFFF</color>
+</resources>

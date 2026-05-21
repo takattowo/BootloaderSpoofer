@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:description="@string/module_description"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/module_label"
+        android:hasCode="true"
+        android:theme="@style/Theme.BootloaderSpoofer">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/module_label"/>
+
+        <activity-alias
+            android:name=".LauncherAlias"
+            android:targetActivity=".MainActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:label="@string/module_label">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!--
+            Stays enabled even when the launcher icon is hidden. CATEGORY_INFO is
+            not displayed by launchers but is resolved by PackageManager.getLaunchIntentForPackage,
+            so LSPosed Manager can still open the app via its "Launch" button.
+        -->
+        <activity-alias
+            android:name=".LaunchInfoAlias"
+            android:targetActivity=".MainActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:label="@string/module_label">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.INFO"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false"
+            android:label="@string/about_title"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".AdvancedActivity"
+            android:exported="false"
+            android:label="@string/advanced_title"
+            android:parentActivityName=".AboutActivity"/>
+
+        <activity
+            android:name=".EditKeyboxActivity"
+            android:exported="false"
+            android:label="@string/edit_keybox_title"
+            android:parentActivityName=".AdvancedActivity"
+            android:windowSoftInputMode="adjustResize"/>
+    </application>
+</manifest>

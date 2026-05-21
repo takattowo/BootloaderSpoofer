@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_label">Bootloader Spoofer</string>
+    <string name="module_description">Spoof locked bootloader for local Android key attestation (libxposed API 101).</string>
+
+    <string name="status_loading">Loading…</string>
+    <string name="status_loading_sub">Connecting to LSPosed</string>
+    <string name="status_enabled">Module Enabled</string>
+    <string name="status_disabled">Module Disabled</string>
+    <string name="status_disabled_sub">Install via LSPosed and enable the module</string>
+    <string name="status_local_only">Designed for local key attestation only. Apps that verify with an online server will not be bypassed.</string>
+
+    <string name="section_mode">Mode</string>
+    <string name="section_app">App</string>
+    <string name="section_about">About</string>
+    <string name="section_advanced">Advanced</string>
+    <string name="section_links">Links</string>
+    <string name="section_settings">Settings</string>
+    <string name="section_keybox">Keybox</string>
+
+    <string name="row_mode_title">Operating mode</string>
+    <string name="mode_leaf_hack_title">Leaf hack</string>
+    <string name="mode_leaf_hack_desc">Rewrite the real attestation leaf. Requires a working TEE.</string>
+    <string name="mode_cert_generate_title">Cert generate</string>
+    <string name="mode_cert_generate_desc">Synthesize the leaf from scratch. Works on broken TEE.</string>
+    <string name="mode_off_title">Off</string>
+    <string name="mode_off_desc">No hooks installed.</string>
+
+    <string name="row_pick_title">Load keybox file</string>
+    <string name="row_pick_subtitle">Pick a keybox.xml from device storage</string>
+    <string name="row_edit_title">Edit keybox</string>
+    <string name="row_edit_subtitle_present">User keybox saved</string>
+    <string name="row_edit_subtitle_absent">No user keybox, bundled in use</string>
+    <string name="row_clear_title">Clear keybox</string>
+    <string name="row_clear_subtitle">Delete saved keybox; bundled fallback will be used</string>
+
+    <string name="row_about_title">About</string>
+    <string name="row_advanced_title">Advanced</string>
+    <string name="row_advanced_subtitle">Custom keybox (may not work)</string>
+    <string name="row_hide_icon_title">Hide app icon</string>
+    <string name="row_hide_icon_on">Launcher icon hidden</string>
+    <string name="row_hide_icon_off">Launcher icon visible</string>
+    <string name="row_hide_icon_warn_title">Hide launcher icon?</string>
+    <string name="row_hide_icon_warn_msg">After hiding, this app will not appear in the launcher. You can reopen it from LSPosed Manager (Modules, Bootloader Spoofer, Launch).</string>
+    <string name="row_hide_icon_warn_ok">Hide</string>
+
+    <string name="advanced_title">Advanced</string>
+    <string name="advanced_warning">Custom keybox is intended for users with a broken TEE who want to test cert-generate mode. Most local attestation checks already work with the bundled AOSP keybox. If a custom keybox is invalid or expired, attestation may fail.</string>
+
+    <string name="edit_keybox_title">Edit keybox.xml</string>
+    <string name="keybox_hint"></string>
+    <string name="btn_save">Save</string>
+
+    <string name="about_title">About</string>
+    <string name="about_version_fmt">v%1$s (%2$d) · %3$s build</string>
+    <string name="row_source_title">Source code</string>
+    <string name="row_source_subtitle">View on GitHub</string>
+    <string name="row_licenses_title">Third-party licenses</string>
+    <string name="row_licenses_subtitle">Libraries used by this app</string>
+    <string name="row_issue_title">Report issue</string>
+    <string name="row_issue_subtitle">Open an issue on GitHub</string>
+
+    <string name="confirm_clear_title">Clear saved keybox?</string>
+    <string name="confirm_clear_msg">The bundled keybox will be used as fallback. This cannot be undone.</string>
+    <string name="confirm_clear_ok">Clear</string>
+    <string name="confirm_cancel">Cancel</string>
+
+    <string name="toast_not_connected">Not connected to LSPosed</string>
+    <string name="toast_saved">Saved</string>
+    <string name="toast_cleared">Keybox cleared</string>
+    <string name="toast_icon_hidden">Launcher icon hidden</string>
+    <string name="toast_icon_visible">Launcher icon visible</string>
+
+    <string name="licenses_body">BouncyCastle (bcpkix-jdk18on), MIT-style.\n\nlibxposed/api, libxposed/service, Apache-2.0.\n\nGoogle Material Components for Android, Apache-2.0.\n\nAndroidX AppCompat, Apache-2.0.\n\nTrickyStore (5ec1cff), GPL-3.0. CertHack and XMLParser ported.\nhttps://github.com/5ec1cff/TrickyStore</string>
+
+    <string name="repo_url" translatable="false">https://github.com/takattowo/BootloaderSpoofer</string>
+    <string name="repo_issues_url" translatable="false">https://github.com/takattowo/BootloaderSpoofer/issues/new</string>
+    <string name="trickystore_url" translatable="false">https://github.com/5ec1cff/TrickyStore</string>
+</resources>
