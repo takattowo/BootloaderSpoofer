@@ -2,7 +2,9 @@
 
 Spoof locked bootloader on local attestations. Built against the modern [libxposed API 101](https://github.com/libxposed/api). Only select apps which check the presence of an unlocked bootloader, never hook Google apps or system framework unless you want to fail Play Integrity checks lol.
 
-@chiteroman: If the app send the certificate to a secure server, you are fucked and this app is useless.
+If the app sends the certificate to a secure server, you are fucked and this app is useless.
+
+This app was made possible with @chiteroman and @5ec1cff's CertHack.
 
 ## Modes
 
